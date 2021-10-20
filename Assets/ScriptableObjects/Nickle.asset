@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 702b235589e92554a9532531c155fe2b, type: 3}
   m_Name: Nickle
   m_EditorClassIdentifier: 
-  oreName: 
-  meltingPoint: 0
-  errorMargin: 0
-  oreSprite: {fileID: 0}
+  oreName: Nickle
+  meltingPoint: 1455
+  errorMargin: 30
+  oreSprite: {fileID: -2063607268619179849, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
