@@ -13,12 +13,7 @@ public class BarsManager : MonoBehaviour
     [SerializeField] private Text ironNumUi;
     [SerializeField] private Text copperNumUi;
     [SerializeField] private Text nickleNumUi;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         goldNumUi.text = "X " + numberOfGold;
@@ -42,6 +37,27 @@ public class BarsManager : MonoBehaviour
                 break;
             case "Copper":
                 numberOfCopper++;
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void RemoveBar(string name,int amount)
+    {
+        switch (name)
+        {
+            case "Gold":
+                numberOfGold -=amount;
+                break;
+            case "Iron":
+                numberOfIron -= amount;
+                break;
+            case "Nickle":
+                numberOfNickle -= amount;
+                break;
+            case "Copper":
+                numberOfCopper -= amount;
                 break;
             default:
                 break;
