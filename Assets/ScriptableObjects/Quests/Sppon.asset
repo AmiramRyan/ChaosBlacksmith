@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
-  m_Name: CopperQuest
+  m_Name: Sppon
   m_EditorClassIdentifier: 
-  title: Machine Broke
+  title: Need a new spoon
   barsReqArr:
-  - {fileID: 11400000, guid: 694d00f2cdcf79d4e968afee2798b2c3, type: 2}
+  - {fileID: 11400000, guid: 41ae2ad5da27e474d893665ed4a47058, type: 2}
+  - {fileID: 11400000, guid: 64b90ec2f427c8c4cb9fe0a81a39fd68, type: 2}
   - {fileID: 11400000, guid: 7152f532e63558c4b8bc7b680a256d5d, type: 2}
-  worth: 350
-  timeLimit: 55
+  worth: 1100
+  timeLimit: 145

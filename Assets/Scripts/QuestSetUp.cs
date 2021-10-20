@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class QuestSetUp : MonoBehaviour
 {
@@ -12,6 +13,24 @@ public class QuestSetUp : MonoBehaviour
     public bool isQuestActive;
     public GameObject barManger;
     public List<GameObject> thisQuestReq;
+    public GameObject scoreManger;
+    public Slider timeSlider;
+    private float timeLimit;
+    private float timeLimitSec;
+
+
+    private void Update()
+    {
+        timeLimitSec -= Time.deltaTime;
+        timeSlider.value = timeLimitSec / timeLimit;
+        if(timeLimitSec <= 0)
+        {
+            //lose stuff
+            this.GetComponent<Image>().color = Color.red;
+            StartCoroutine(LoseCo());
+        }
+    }
+
     public void SetUp()
     {
         isQuestActive = true;
@@ -21,6 +40,9 @@ public class QuestSetUp : MonoBehaviour
             GameObject temp = Instantiate(barImageAndReq, reqParent, true) as GameObject;
             temp.GetComponentInChildren<Text>().text = "" + quest.barsReqArr[i].requierdNum;
             temp.GetComponentInChildren<Image>().sprite = quest.barsReqArr[i].barImg;
+            timeLimit = quest.timeLimit;
+            timeLimitSec = timeLimit;
+
             thisQuestReq.Add(temp);
         }
     }
@@ -99,7 +121,12 @@ public class QuestSetUp : MonoBehaviour
         thisQuestReq.Clear();
         Debug.Log("quest compleat");
         //add score
-        //refresh quest
+        scoreManger.GetComponent<ScoreManager>().AddScore(quest.worth);
     }
 
+    public IEnumerator LoseCo()
+    {
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene("EndMenu");
+    }
 }

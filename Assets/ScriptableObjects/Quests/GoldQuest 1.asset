@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: GoldQuest 1
   m_EditorClassIdentifier: 
   title: Build my throne
-  discription: 
-  barsManager: {fileID: 0}
   barsReqArr:
   - {fileID: 11400000, guid: f2cfd5f8b09ad6342a15a9ac5265c2bd, type: 2}
   - {fileID: 11400000, guid: f7041b14ff82a084b99abb4cb911275a, type: 2}
-  questClear: 0
+  worth: 350
+  timeLimit: 60

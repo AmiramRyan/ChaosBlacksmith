@@ -6,4 +6,6 @@ public class Quest : ScriptableObject
 {
     public string title;
     public List<QuestBar> barsReqArr;
+    public int worth;
+    public float timeLimit;
 }

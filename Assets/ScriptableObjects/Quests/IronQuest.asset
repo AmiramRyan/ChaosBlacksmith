@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
   m_Name: IronQuest
   m_EditorClassIdentifier: 
-  title: Golems Repair
-  discription: 
-  barsManager: {fileID: 0}
+  title: Golem Repair
   barsReqArr:
   - {fileID: 11400000, guid: 9ea84c41eebeb2040a6a153c0ea9a723, type: 2}
   - {fileID: 11400000, guid: a442ce1a816aadf42a80083169c654aa, type: 2}
+  worth: 1150
+  timeLimit: 170

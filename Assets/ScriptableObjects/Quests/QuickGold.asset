@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
-  m_Name: CopperQuest
+  m_Name: QuickGold
   m_EditorClassIdentifier: 
-  title: Machine Broke
+  title: Get rich fast plan
   barsReqArr:
-  - {fileID: 11400000, guid: 694d00f2cdcf79d4e968afee2798b2c3, type: 2}
-  - {fileID: 11400000, guid: 7152f532e63558c4b8bc7b680a256d5d, type: 2}
-  worth: 350
-  timeLimit: 55
+  - {fileID: 11400000, guid: f2cfd5f8b09ad6342a15a9ac5265c2bd, type: 2}
+  worth: 200
+  timeLimit: 30

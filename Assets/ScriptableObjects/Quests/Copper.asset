@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
-  m_Name: CopperQuest
+  m_Name: Copper
   m_EditorClassIdentifier: 
-  title: Machine Broke
+  title: TonyTonyCopper
   barsReqArr:
-  - {fileID: 11400000, guid: 694d00f2cdcf79d4e968afee2798b2c3, type: 2}
-  - {fileID: 11400000, guid: 7152f532e63558c4b8bc7b680a256d5d, type: 2}
-  worth: 350
-  timeLimit: 55
+  - {fileID: 11400000, guid: 211558a539d882d4f8794c95e57e3cac, type: 2}
+  - {fileID: 11400000, guid: 1a0e54e4233d16544a41f0a3af7016b9, type: 2}
+  worth: 600
+  timeLimit: 95
