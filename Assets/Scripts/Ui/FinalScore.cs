@@ -8,7 +8,7 @@ public class FinalScore : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Final Score: " + score.runTimeValueScore;
+        scoreText.text = "High Score: " + score.highScore;
     }
 
 }

@@ -15,6 +15,7 @@ public class GenericOre : MonoBehaviour
     public int positionInBag;
     public GameObject productAnim;
     public Sprite failedSprite;
+    public GameObject soundManager;
 
     public virtual void Start()
     {
@@ -22,6 +23,7 @@ public class GenericOre : MonoBehaviour
         tempManager = GameObject.FindWithTag("TemperatureManager");
         barManager = GameObject.FindWithTag("BarsManager");
         productAnim = GameObject.FindWithTag("Product");
+        soundManager = GameObject.FindWithTag("SoundManager");
         SetPosition(currentPos);
         this.GetComponent<SpriteRenderer>().sprite = oreData.oreSprite;
         onTheForge = false;
@@ -33,10 +35,12 @@ public class GenericOre : MonoBehaviour
         Vector3 mousPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         mousPos.z = 0;
         transform.position = mousPos;
+        Cursor.visible = false;
     }
 
     public virtual void OnMouseUp()
     {
+        Cursor.visible = true;
         if (onTheForge)
         {
             PutInForge();
@@ -46,14 +50,6 @@ public class GenericOre : MonoBehaviour
             transform.position = currentPos;
         }
     }
-
-    /*private void OnTriggerStay2D(Collider2D other) IF I WANNA ADD HIGHLIGHTS
-    {
-        if (other.CompareTag("Forge") && other.isTrigger)
-        {
-            Debug.Log("ImONNNN");
-        }
-    }*/
 
     public virtual void OnTriggerEnter2D(Collider2D other)
     {
@@ -74,6 +70,7 @@ public class GenericOre : MonoBehaviour
     #endregion
     public virtual void PutInForge()
     {
+        soundManager.GetComponent<SoundManager>().fire.Play();
         if (tempManager.GetComponent<Tempeture>().currentTemp >= oreData.meltingPoint)
         {
             spawner.GetComponent<OreSpawner>().FillGaps(positionInBag);

@@ -11,6 +11,7 @@ TagManager:
   - TemperatureManager
   - QuestManager
   - Product
+  - SoundManager
   layers:
   - Default
   - TransparentFX

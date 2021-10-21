@@ -9,6 +9,7 @@ public class OreSpawner : MonoBehaviour
     public GameObject[] bagArray;
     [SerializeField] private List<GameObject> currentBagList;
     [SerializeField] private int nextSpot;
+    public GameObject soundManager;
 
     void Start()
     {
@@ -16,7 +17,6 @@ public class OreSpawner : MonoBehaviour
         bagArray = new GameObject[oreSpots.Length];
         FirstSetup();
     }
-
 
     private void FirstSetup()
     {
@@ -50,8 +50,10 @@ public class OreSpawner : MonoBehaviour
     }
 
     #region Shop packs
+
     public void SpawnCoal()
     {
+        soundManager.GetComponent<SoundManager>().click.Play();
         ClearBag();
         nextSpot = 0;
         for(int i = 0; i < 5; i++)
@@ -76,6 +78,7 @@ public class OreSpawner : MonoBehaviour
     public void SpawnGold()
     {
         ClearBag();
+        soundManager.GetComponent<SoundManager>().click.Play();
         nextSpot = 0;
         for (int i = 0; i < 5; i++)
         {
@@ -99,6 +102,7 @@ public class OreSpawner : MonoBehaviour
     public void SpawnCopper()
     {
         ClearBag();
+        soundManager.GetComponent<SoundManager>().click.Play();
         nextSpot = 0;
         for (int i = 0; i < 5; i++)
         {
@@ -122,6 +126,7 @@ public class OreSpawner : MonoBehaviour
     public void SpawnNickle()
     {
         ClearBag();
+        soundManager.GetComponent<SoundManager>().click.Play();
         nextSpot = 0;
         for (int i = 0; i < 5; i++)
         {
@@ -145,6 +150,7 @@ public class OreSpawner : MonoBehaviour
     public void SpawnIron()
     {
         ClearBag();
+        soundManager.GetComponent<SoundManager>().click.Play();
         nextSpot = 0;
         for (int i = 0; i < 5; i++)
         {

@@ -18,6 +18,7 @@ public class QuestSetUp : MonoBehaviour
     private float timeLimit;
     private float timeLimitSec;
     public GameObject moneyManager;
+    public GameObject soundManager;
 
 
     private void Update()
@@ -27,7 +28,10 @@ public class QuestSetUp : MonoBehaviour
         if(timeLimitSec <= 0)
         {
             //lose stuff
+            soundManager.GetComponent<SoundManager>().lose.Play();
             this.GetComponent<Image>().color = Color.red;
+            Cursor.visible = false;
+            Cursor.lockState = CursorLockMode.Locked;
             StartCoroutine(LoseCo());
         }
     }
@@ -124,11 +128,15 @@ public class QuestSetUp : MonoBehaviour
         //add score
         scoreManger.GetComponent<ScoreManager>().AddScore(quest.worth);
         moneyManager.GetComponent<MoneyManager>().AddMoney(quest.moneyWorth);
+        soundManager.GetComponent<SoundManager>().coin.Play();
     }
 
     public IEnumerator LoseCo()
     {
-        yield return new WaitForSeconds(2f);
+        scoreManger.GetComponent<ScoreManager>().currentScore.RecordHighScore();
+        yield return new WaitForSeconds(4f);
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
     }
 }
