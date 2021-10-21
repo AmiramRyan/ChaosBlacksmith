@@ -8,4 +8,5 @@ public class Quest : ScriptableObject
     public List<QuestBar> barsReqArr;
     public int worth;
     public float timeLimit;
+    public float moneyWorth;
 }

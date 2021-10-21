@@ -9,15 +9,19 @@ public class GenericOre : MonoBehaviour
     public GameObject tempManager;
     public GameObject barManager;
     public int tempChangeAmount;
+    public int tempFailedChange;
     public Ore oreData;
     public Vector3 currentPos;
     public int positionInBag;
+    public GameObject productAnim;
+    public Sprite failedSprite;
 
     public virtual void Start()
     {
         spawner = GameObject.FindWithTag("OreSpawner");
         tempManager = GameObject.FindWithTag("TemperatureManager");
         barManager = GameObject.FindWithTag("BarsManager");
+        productAnim = GameObject.FindWithTag("Product");
         SetPosition(currentPos);
         this.GetComponent<SpriteRenderer>().sprite = oreData.oreSprite;
         onTheForge = false;
@@ -75,15 +79,16 @@ public class GenericOre : MonoBehaviour
             spawner.GetComponent<OreSpawner>().FillGaps(positionInBag);
             tempManager.GetComponent<Tempeture>().ChangeTemp(tempChangeAmount);
             barManager.GetComponent<BarsManager>().AddBar(oreData.name);
+            productAnim.GetComponent<SpriteRenderer>().sprite = oreData.barSprite;
+            productAnim.GetComponent<Animator>().SetTrigger("AddOre");
             Destroy(this.gameObject);
         }
         else
         {
-            //ore ruinend somehow
             spawner.GetComponent<OreSpawner>().FillGaps(positionInBag);
-            tempManager.GetComponent<Tempeture>().ChangeTemp(tempChangeAmount);
-            //debug only
-            Debug.Log("Ruined! " + this.gameObject.name);
+            tempManager.GetComponent<Tempeture>().ChangeTemp(tempFailedChange);
+            productAnim.GetComponent<SpriteRenderer>().sprite = failedSprite;
+            productAnim.GetComponent<Animator>().SetTrigger("AddOre");
             Destroy(this.gameObject);
         }
     }

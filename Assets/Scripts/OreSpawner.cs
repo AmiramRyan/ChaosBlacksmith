@@ -7,37 +7,37 @@ public class OreSpawner : MonoBehaviour
     public Transform[] oreSpots;
     public GameObject[] oresArray;
     public GameObject[] bagArray;
+    [SerializeField] private List<GameObject> currentBagList;
     [SerializeField] private int nextSpot;
 
     void Start()
     {
         nextSpot = 0;
         bagArray = new GameObject[oreSpots.Length];
-        Setup();
+        FirstSetup();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    private void FirstSetup()
     {
-        //for debugg
-        if (Input.GetKeyDown("d"))
+        for (int i = 0; i < 3; i++)
         {
-            Setup();
-        } 
-        //end debugg
-    }
-
-    private void Setup()
-    {
+            GameObject ore = Instantiate(oresArray[4], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
         do
         {
             int randomOre = Random.Range(0, oresArray.Length);
-            GameObject ore = Instantiate(oresArray[randomOre],oreSpots[nextSpot].position,Quaternion.identity) as GameObject;
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
             ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
             ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
             bagArray[nextSpot] = ore;
             nextSpot++;
-        }while (nextSpot < oreSpots.Length) ;
+        } while (nextSpot < oreSpots.Length);
     }
 
     public void FillGaps(int thisOreSpot)
@@ -48,5 +48,132 @@ public class OreSpawner : MonoBehaviour
         ore.GetComponent<GenericOre>().positionInBag = thisOreSpot;
         bagArray[thisOreSpot] = ore;
     }
-    
+
+    #region Shop packs
+    public void SpawnCoal()
+    {
+        ClearBag();
+        nextSpot = 0;
+        for(int i = 0; i < 5; i++)
+        {
+            GameObject ore = Instantiate(oresArray[4], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
+        do
+        {
+            int randomOre = Random.Range(0, oresArray.Length);
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
+            bagArray[nextSpot] = ore;
+            nextSpot++;
+        } while (nextSpot < oreSpots.Length);
+    }
+    public void SpawnGold()
+    {
+        ClearBag();
+        nextSpot = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject ore = Instantiate(oresArray[0], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
+        do
+        {
+            int randomOre = Random.Range(0, oresArray.Length);
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
+            bagArray[nextSpot] = ore;
+            nextSpot++;
+        } while (nextSpot < oreSpots.Length);
+    }
+    public void SpawnCopper()
+    {
+        ClearBag();
+        nextSpot = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject ore = Instantiate(oresArray[1], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
+        do
+        {
+            int randomOre = Random.Range(0, oresArray.Length);
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
+            bagArray[nextSpot] = ore;
+            nextSpot++;
+        } while (nextSpot < oreSpots.Length);
+    }
+    public void SpawnNickle()
+    {
+        ClearBag();
+        nextSpot = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject ore = Instantiate(oresArray[3], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
+        do
+        {
+            int randomOre = Random.Range(0, oresArray.Length);
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
+            bagArray[nextSpot] = ore;
+            nextSpot++;
+        } while (nextSpot < oreSpots.Length);
+    }
+    public void SpawnIron()
+    {
+        ClearBag();
+        nextSpot = 0;
+        for (int i = 0; i < 5; i++)
+        {
+            GameObject ore = Instantiate(oresArray[2], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            bagArray[i] = ore;
+            nextSpot++;
+        }
+        do
+        {
+            int randomOre = Random.Range(0, oresArray.Length);
+            GameObject ore = Instantiate(oresArray[randomOre], oreSpots[nextSpot].position, Quaternion.identity) as GameObject;
+            ore.GetComponent<GenericOre>().currentPos = ore.transform.position;
+            ore.GetComponent<GenericOre>().positionInBag = nextSpot;
+            //currentBagList.Add(ore);
+            bagArray[nextSpot] = ore;
+            nextSpot++;
+        } while (nextSpot < oreSpots.Length);
+    }
+
+    #endregion
+
+    private void ClearBag()
+    {
+        for(int i = bagArray.Length-1; i>= 0; i--)
+        {
+            Debug.Log(i);
+            Destroy(bagArray[i]);
+        }
+    }
 }

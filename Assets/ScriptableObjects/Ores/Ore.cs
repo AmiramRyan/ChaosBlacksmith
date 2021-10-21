@@ -9,4 +9,5 @@ public class Ore : ScriptableObject
     public float meltingPoint;
     public float errorMargin; // how much of a tempeture diffrance still count as success
     public Sprite oreSprite;
+    public Sprite barSprite;
 }

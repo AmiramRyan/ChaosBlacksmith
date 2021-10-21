@@ -239,10 +239,10 @@ RectTransform:
   m_Father: {fileID: 935218807}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.80942}
-  m_AnchorMax: {x: 0.88175064, y: 1}
-  m_AnchoredPosition: {x: 0.0004272461, y: 0.00024414062}
-  m_SizeDelta: {x: 804.3, y: 186.85}
+  m_AnchorMin: {x: 0.104441285, y: 0.7598903}
+  m_AnchorMax: {x: 0.90325505, y: 1}
+  m_AnchoredPosition: {x: -0.00018310547, y: 0.00021362305}
+  m_SizeDelta: {x: 729.52, y: 123.3}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678598127
 MonoBehaviour:
@@ -274,10 +274,10 @@ MonoBehaviour:
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Final Score: 999'
+  m_Text: ChaosBlacksmith
 --- !u!222 &678598128
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 872517785}
   - component: {fileID: 872517784}
   m_Layer: 5
-  m_Name: RestartBtn
+  m_Name: Startbtn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -988,7 +988,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Try Again
+  m_Text: Start
 --- !u!222 &2075771398
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -17,3 +17,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f2cfd5f8b09ad6342a15a9ac5265c2bd, type: 2}
   worth: 200
   timeLimit: 30
+  moneyWorth: 20

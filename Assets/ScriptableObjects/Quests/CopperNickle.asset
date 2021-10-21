@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
-  m_Name: Gold
+  m_Name: CopperNickle
   m_EditorClassIdentifier: 
-  title: Gold Plated Cat
-  barsReqArr:
-  - {fileID: 11400000, guid: cbc3d8a87c36c334b9f90db98a8633dd, type: 2}
-  worth: 500
-  timeLimit: 100
-  moneyWorth: 1000
+  title: 
+  barsReqArr: []
+  worth: 0
+  timeLimit: 0
+  moneyWorth: 0

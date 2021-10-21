@@ -17,6 +17,7 @@ public class QuestSetUp : MonoBehaviour
     public Slider timeSlider;
     private float timeLimit;
     private float timeLimitSec;
+    public GameObject moneyManager;
 
 
     private void Update()
@@ -39,6 +40,7 @@ public class QuestSetUp : MonoBehaviour
         {
             GameObject temp = Instantiate(barImageAndReq, reqParent, true) as GameObject;
             temp.GetComponentInChildren<Text>().text = "" + quest.barsReqArr[i].requierdNum;
+            temp.GetComponentInChildren<Text>().color = quest.barsReqArr[i].textColor;
             temp.GetComponentInChildren<Image>().sprite = quest.barsReqArr[i].barImg;
             timeLimit = quest.timeLimit;
             timeLimitSec = timeLimit;
@@ -119,14 +121,14 @@ public class QuestSetUp : MonoBehaviour
             Destroy(thisQuestReq[i]);
         }
         thisQuestReq.Clear();
-        Debug.Log("quest compleat");
         //add score
         scoreManger.GetComponent<ScoreManager>().AddScore(quest.worth);
+        moneyManager.GetComponent<MoneyManager>().AddMoney(quest.moneyWorth);
     }
 
     public IEnumerator LoseCo()
     {
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("EndMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 }

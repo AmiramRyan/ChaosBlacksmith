@@ -5,9 +5,11 @@ using UnityEngine.UI;
 
 public class Tempeture : MonoBehaviour
 {
-    [SerializeField]  private int maxTemp;
+    [SerializeField]  private float maxTemp;
     [SerializeField] private Text tempText;
-    public int currentTemp;
+    [SerializeField] private Slider tempSlider;
+    [SerializeField] private float burnOutRate;
+    public float currentTemp;
 
     void Start()
     {
@@ -18,6 +20,10 @@ public class Tempeture : MonoBehaviour
     void Update()
     {
         UpdateTempBarUi();
+        if (currentTemp > 0)
+        {
+            currentTemp -= Time.deltaTime * burnOutRate;
+        }
     }
 
     public void ChangeTemp(int amount)
@@ -35,6 +41,7 @@ public class Tempeture : MonoBehaviour
 
     private void UpdateTempBarUi()
     {
-        tempText.text = "" + currentTemp;
+        tempText.text = Mathf.Floor(currentTemp) + "C";
+        tempSlider.value = currentTemp / maxTemp;
     }
 }

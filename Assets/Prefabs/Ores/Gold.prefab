@@ -100,10 +100,14 @@ MonoBehaviour:
   onTheForge: 0
   spawner: {fileID: 0}
   tempManager: {fileID: 0}
+  barManager: {fileID: 0}
   tempChangeAmount: -50
+  tempFailedChange: -10
   oreData: {fileID: 11400000, guid: d4a47f29e72ef7440908a8c2874494c0, type: 2}
   currentPos: {x: 0, y: 0, z: 0}
   positionInBag: 0
+  productAnim: {fileID: 0}
+  failedSprite: {fileID: -4491385618645641938, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
 --- !u!58 &7785314371949023031
 CircleCollider2D:
   m_ObjectHideFlags: 0

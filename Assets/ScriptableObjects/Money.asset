@@ -9,12 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
-  m_Name: Gold
+  m_Script: {fileID: 11500000, guid: 9b819d3ce7caed24b827aa6b5edd402e, type: 3}
+  m_Name: Money
   m_EditorClassIdentifier: 
-  title: Gold Plated Cat
-  barsReqArr:
-  - {fileID: 11400000, guid: cbc3d8a87c36c334b9f90db98a8633dd, type: 2}
-  worth: 500
-  timeLimit: 100
-  moneyWorth: 1000
+  initialValueScore: 0
+  runTimeValueScore: 195

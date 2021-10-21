@@ -6,8 +6,8 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
     [SerializeField] private Text scoreText;
+    public GameManager gameManager;
     public ScoreValue currentScore;
-    // Update is called once per frame
     void Update()
     {
         scoreText.text ="" + currentScore.runTimeValueScore;
@@ -16,5 +16,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         currentScore.runTimeValueScore += amount;
+        gameManager.questDone++;
+        gameManager.questChange = true;
     }
 }
