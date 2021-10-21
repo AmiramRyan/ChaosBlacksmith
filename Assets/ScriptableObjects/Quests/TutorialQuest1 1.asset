@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
+  m_Name: TutorialQuest1 1
+  m_EditorClassIdentifier: 
+  title: Make some copper
+  barsReqArr:
+  - {fileID: 11400000, guid: 0d522d621b2d57448bdcecc457b63b1b, type: 2}
+  worth: 0
+  timeLimit: 200
+  moneyWorth: 1000

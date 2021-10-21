@@ -13,7 +13,7 @@ public enum Level
 public class GameManager : MonoBehaviour
 {
     public int questDone;
-    [SerializeField] private QuestSpawner questSpawner;
+    public QuestSpawner questSpawner;
     public bool questChange;
     public Level currentLevel;
     public int timeBetweenQuestsLvl1;
@@ -21,13 +21,13 @@ public class GameManager : MonoBehaviour
     public int timeBetweenQuestsLvl3;
     public int timeBetweenQuestsLvl4;
     public int timeBetweenQuestsLvl5;
-    void Start()
+    public virtual void Start()
     {
         questSpawner.timeBetweenQuests = timeBetweenQuestsLvl1;
         currentLevel = Level.lvl1;
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (questChange)
         {

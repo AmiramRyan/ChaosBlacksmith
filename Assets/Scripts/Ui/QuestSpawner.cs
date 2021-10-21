@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class QuestSpawner : MonoBehaviour
 {
-    [SerializeField] private bool questReady;
+    public bool questReady;
     public Quest[] questArr;
     public GameObject[] questWindowArr;
     public float timeBetweenQuests;
-    private void Start()
+    public virtual void Start()
     {
         questReady = false;
         StartCoroutine(QuestSpawnTimerCo());
     }
 
-    void Update()
+    public virtual void Update()
     {
         if (questReady)
         {
@@ -38,7 +38,7 @@ public class QuestSpawner : MonoBehaviour
         }
     }
 
-    private IEnumerator QuestSpawnTimerCo()
+    public IEnumerator QuestSpawnTimerCo()
     {
         yield return new WaitForSeconds(timeBetweenQuests);
         questReady = true;
