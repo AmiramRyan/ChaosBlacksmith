@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Metal Concert
   barsReqArr:
-  - {fileID: 11400000, guid: 41ae2ad5da27e474d893665ed4a47058, type: 2}
+  - {fileID: 11400000, guid: f7041b14ff82a084b99abb4cb911275a, type: 2}
   - {fileID: 11400000, guid: 1a0e54e4233d16544a41f0a3af7016b9, type: 2}
   - {fileID: 11400000, guid: 0d522d621b2d57448bdcecc457b63b1b, type: 2}
   worth: 900
   timeLimit: 110
-  moneyWorth: 180
+  moneyWorth: 300

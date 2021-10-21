@@ -15,3 +15,4 @@ MonoBehaviour:
   barName: Copper
   requierdNum: 1
   barImg: {fileID: -7026640648144260932, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  textColor: {r: 0.99215686, g: 0.28627452, b: 0.14509805, a: 1}

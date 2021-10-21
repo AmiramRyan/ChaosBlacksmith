@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Gold
   m_EditorClassIdentifier: 
   oreName: Gold
-  meltingPoint: 1064
+  meltingPoint: 300
   errorMargin: 9
   oreSprite: {fileID: -9203651564196402015, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  barSprite: {fileID: -789270085981297794, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}

@@ -16,3 +16,4 @@ MonoBehaviour:
   meltingPoint: 0
   errorMargin: 0
   oreSprite: {fileID: 36690017237711160, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  barSprite: {fileID: -907790477227236951, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}

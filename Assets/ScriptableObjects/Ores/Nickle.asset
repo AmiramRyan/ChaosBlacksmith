@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Nickle
   m_EditorClassIdentifier: 
   oreName: Nickle
-  meltingPoint: 1455
+  meltingPoint: 1100
   errorMargin: 30
   oreSprite: {fileID: -2063607268619179849, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  barSprite: {fileID: 7310834761641906395, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}

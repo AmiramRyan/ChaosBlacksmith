@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Money
   m_EditorClassIdentifier: 
   initialValueScore: 0
-  runTimeValueScore: 195
+  runTimeValueScore: 0

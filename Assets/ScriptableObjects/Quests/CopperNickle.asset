@@ -12,8 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f209b841516c03b4fa80f23734095974, type: 3}
   m_Name: CopperNickle
   m_EditorClassIdentifier: 
-  title: 
-  barsReqArr: []
-  worth: 0
-  timeLimit: 0
-  moneyWorth: 0
+  title: New Shampoo recepie
+  barsReqArr:
+  - {fileID: 11400000, guid: 1a0e54e4233d16544a41f0a3af7016b9, type: 2}
+  - {fileID: 11400000, guid: 582006e32ddc90e4e8b8f7137e560f2c, type: 2}
+  - {fileID: 11400000, guid: f7041b14ff82a084b99abb4cb911275a, type: 2}
+  - {fileID: 11400000, guid: 9ea84c41eebeb2040a6a153c0ea9a723, type: 2}
+  worth: 200
+  timeLimit: 85
+  moneyWorth: 300

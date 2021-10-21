@@ -15,8 +15,7 @@ MonoBehaviour:
   title: Need a new spoon
   barsReqArr:
   - {fileID: 11400000, guid: 41ae2ad5da27e474d893665ed4a47058, type: 2}
-  - {fileID: 11400000, guid: 64b90ec2f427c8c4cb9fe0a81a39fd68, type: 2}
   - {fileID: 11400000, guid: 7152f532e63558c4b8bc7b680a256d5d, type: 2}
   worth: 1100
   timeLimit: 145
-  moneyWorth: 230
+  moneyWorth: 250

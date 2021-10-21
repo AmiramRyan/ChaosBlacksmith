@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Iron
   m_EditorClassIdentifier: 
   oreName: Iron
-  meltingPoint: 1536
+  meltingPoint: 1600
   errorMargin: 30
   oreSprite: {fileID: 8544665744477900619, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  barSprite: {fileID: 2944812914697334030, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}

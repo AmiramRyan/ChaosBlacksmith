@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Copper
   m_EditorClassIdentifier: 
   oreName: Copper
-  meltingPoint: 1084
+  meltingPoint: 790
   errorMargin: 9
   oreSprite: {fileID: 5409983421505243153, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
+  barSprite: {fileID: -7026640648144260932, guid: 840a3b8fe05d2eb40afad9c01e73e845, type: 3}
